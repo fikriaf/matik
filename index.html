@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Fikri-Tech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="source/edit/style.css">
+    <script src="source/edit/save.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+      <a class="navbar-brand" href="#">Fikri-Tech</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Menu</a>
+            <ul class="menu-list">          
+              <li><a href="#" onclick="homepage('homepage')">Home</a></li>
+              <li><a href="/source/artificial.html" onclick="loadMenu('BOT AI')">BOT AI</a></li>
+              <li><a href="#" onclick="loadMenu('account')">Account</a></li>
+              <li><a class="account" href="#" onclick="return logout()">Login</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tentang</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Kontak</a>
+          </li>    
+        </ul>
+      </div>
+      <form class="search">
+        <input type="text" placeholder="Type..." required>
+        <input class="btn-search" type="button" value="Search">
+      </form>
+    </nav>
+
+
+    <div class="container">
+      <h1>Selamat datang di website Fikri!</h1>
+      <p>Ini cuma website biasa</p><br>
+
+      <h2>Konten Random</h2>
+      <p>Berikut adalah beberapa paragraf acak:</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla lacus ut metus luctus, in sodales quam tristique. Phasellus ultricies tellus et turpis feugiat hendrerit.</p>
+      <p>Quisque ornare fringilla augue, ut feugiat lorem elementum ac. Suspendisse potenti. Integer porta ultricies mauris et bibendum. Sed vel enim ut quam lacinia rhoncus ut a ipsum.</p>
+      <p>Nunc ac odio rhoncus, posuere magna nec, molestie mi. Nulla faucibus nibh quam, eu ultrices nisl vestibulum a. Donec tempor, dolor a consectetur tincidunt, sapien elit dignissim leo, eget eleifend lectus tellus vel ipsum.</p>
+      <br>
+      <h2>Hiasan Desain</h2>
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="https://i.postimg.cc/bY42P7FT/x1080.jpg" class="img-thumbnail" alt="Swallowed Star">
+        </div>
+        <div class="col-sm-4">
+          <img src="https://i.postimg.cc/QMBWC5Zj/a-cover-d1880e59e19ae714ff7b614a8374f14c-600x400.jpg" class="img-thumbnail" alt="Universe">
+        </div>
+        <div class="col-sm-4">
+          <img src="https://i.postimg.cc/431jKK6F/landscape-nature-lake-wallpaper-preview.jpg" class="img-thumbnail" alt="Nature">
+        </div>
+      </div><br>
+      <h2>Playing Video</h2>
+      <div class="media">
+        <video controls loop>
+          <source src="source/ssstik.io_1682563278244.mp4" type="video/mp4">
+        </video>
+      </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+

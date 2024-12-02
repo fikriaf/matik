@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fikri-Tech</title>
+    <link rel="stylesheet" type="text/css" href="edit/style.css">
+    <script src="edit/save.js"></script>
+</head>
+<body>
+    <h1>Chatbot</h1>
+    <div id="chat-container">
+        <div id="chat-log"></div>
+    </div>
+    <form id="message-form" onsubmit="sendMessage(event)">
+        <input type="text" id="message-input" autocomplete="off" placeholder="Type your message...">
+        <button type="submit">Send</button>
+    </form>
+
+    <script>
+        function appendMessage(message, isUser = false) {
+            const chatLog = document.getElementById("chat-log");
+            const messageClass = isUser ? "user-message" : "bot-message";
+            const messageElement = document.createElement("div");
+            messageElement.classList.add(messageClass);
+            messageElement.innerText = message;
+            chatLog.appendChild(messageElement);
+            chatLog.scrollTop = chatLog.scrollHeight; // Mengatur scroll ke bawah saat pesan ditambahkan
+        }
+
+        function sendMessage(event) {
+            event.preventDefault();
+            const input = document.getElementById("message-input");
+            const message = input.value.trim();
+            input.value = "";
+
+            if (message) {
+                appendMessage(`You: ${message}`, true);
+                fetch("/chat", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ message: message })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const botResponse = data.response;
+                    appendMessage(`Bot: ${botResponse}`);
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                });
+            }
+        }
+    </script>
+</body>
+</html>

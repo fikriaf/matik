@@ -1,0 +1,113 @@
+
+@media (max-width: 767px) {
+  body {
+    background: linear-gradient(90deg, rgb(36, 216, 219) 0%, rgb(90, 45, 253) 100%);
+  }
+  center.login-form {
+    margin-top: 10%;
+  }
+  nav a.navbar-brand {
+    font-style: oblique;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background: linear-gradient(90deg, rgb(36, 216, 219) 0%, rgb(90, 45, 253) 100%);
+  }
+
+  center .login-form {
+    margin-top: 15%;
+  }
+
+  nav a .navbar-brand {
+    font-style: oblique;
+  }
+
+  div .container {
+    margin: 20px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .navbar-nav {
+    position: relative;
+  }
+
+  .navbar-nav .menu-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100px;
+    background-color: #39393d;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar-nav .nav-item:hover .menu-list {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(8px);
+  }
+
+  .navbar-nav .menu-list li {
+    padding: 8px;
+  }
+
+  .navbar-nav .menu-list li:hover {
+    background-color: #f4f4f4;
+  }
+
+  .navbar-nav .menu-list a {
+    display: block;
+    color: #bdbdbd;
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  ul {
+  list-style: none;
+  padding-right: 0;
+  margin-left: 0;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
+  }
+
+  .search {
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .navbar-nav .nav-item .menu-list {
+    display: inline-block;
+    position: absolute;
+    padding: 0;
+  }
+
+  .nav-item {
+    width: 100px;
+    text-align: center;
+  }
+
+  .media {
+    border-color: rgb(15, 151, 241);
+    border-style: groove;
+    border-width: 20px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+  }
+
+  #chat-container {
+    height: 400px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  .user-message {
+    color: blue;
+  }
+  .bot-message {
+    color: green;
+  }
+}
